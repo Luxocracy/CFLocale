@@ -1,0 +1,4 @@
+node_modules/*
+CFLocale-linux
+CFLocale-macos
+CFLocale-win.exe
