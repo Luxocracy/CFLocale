@@ -1,6 +1,6 @@
 {
   "name": "CFLocale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grabs translations from Curseforge and outputs it into the proper lua format for Ace-Locale",
   "main": "CFLocale.js",
   "scripts": {},

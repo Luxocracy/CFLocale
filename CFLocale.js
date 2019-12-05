@@ -4,6 +4,7 @@ const fs = require('fs');
 function getLocale(addonName, projectID, token, dir='', primaryLanguage='enUS') {
 	const languages = ['enUS', 'deDE', 'esES', 'esMX', 'frFR', 'itIT', 'koKR', 'ptBR', 'ruRU', 'zhCN', 'zhTW'];
 
+	console.log('Creating requests for localization data...');
 	for(let i=0; i < languages.length; i++) {
 		let language = languages[i];
 		if(language == primaryLanguage) continue;
@@ -13,6 +14,7 @@ function getLocale(addonName, projectID, token, dir='', primaryLanguage='enUS') 
 				'X-Api-Token': token,
 			}
 		}, (err, response, body) => {
+			console.log('Writing lua file for:', language);
 			let prefix = `local L = LibStub("AceLocale-3.0"):NewLocale("${addonName}", "${language}")
 if not L then return end
 
